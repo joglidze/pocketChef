@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="product.imagePath" [alt]="product.description" style="max-height:250px">  
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 p-3">
+        <h1>{{product.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="bn-group "appDropdown>
+             <button type="button" class="btn btn-primary droptown-toggle">Manage Recipe <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+                <li><a (click)="addShopping()" style="cursor: pointer;">Add to Shopping List </a></li>
+                <li style="cursor: pointer;"><a (click)="editPage()">Add Recipe</a></li>
+                <li style="cursor: pointer;"><a (click)="onDelete()" >Delete Recipe</a></li>
+             </ul>
+        </div>
+       
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+     
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+      <p>{{product.description}}</p>  
+    </div>
+</div>
+<div class="row ">
+    <div class="col-xs-12 ">
+        <ul class="list-group ">
+            <li class="list-group-item" *ngFor="let ing of product.ingridients">{{ing.name}} - ({{ing.amount}})
+                
+            </li>
+                
+        </ul>
+        
+    </div>
+</div>
+
+

@@ -1,0 +1,17 @@
+.navbar-brand{
+    
+  height: 100px;
+  padding: 15px 15px;
+  font-size: 18px;
+    
+ 
+}
+.main-cont{
+    display: flex;
+    
+    align-items: center;
+}
+
+.w-100{
+  width:100% !important
+}

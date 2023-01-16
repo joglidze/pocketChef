@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+  <div class="container-lg main-cont">
+    <div>
+      <a href="#">
+        <img class="navbar-brand" src="assets/images/logo.png" alt="logo"
+      /></a>
+    </div>
+    <div class="collapse navbar-collapse w-100">
+      <ul class="nav navbar-nav">
+        <li routerLink="/recipe" style="cursor: pointer">
+          <a> Recipes</a>
+        </li>
+        <li routerLink="/shoppingList" style="cursor: pointer">
+          <a> Shopping List</a>
+        </li>
+        <li routerLink="/auth" style="cursor: pointer" *ngIf="!isAuthenticate" class="d-flex justify-content-end">
+          <a >Authenticate</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a style="cursor: pointer" *ngIf="isAuthenticate" (click)="onLogout()"
+            >Logout</a
+          >
+        </li>
+        <li class="dropdown" appDropdown>
+          <a
+            class="dropdown-toggle"
+            style="cursor: pointer"
+            *ngIf="isAuthenticate"
+            >Manage <span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a style="cursor: pointer" (click)="onSaveData()"> Save Data</a>
+            </li>
+            <li>
+              <a (click)="onFetchData()" style="cursor: pointer">
+                Save Fetch Data</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
